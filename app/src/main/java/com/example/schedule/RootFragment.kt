@@ -5,15 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.replace
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.schedule.databinding.FragmentRootBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class RootFragment: Fragment() {
 
     private var _binding: FragmentRootBinding? = null
     private val binding: FragmentRootBinding
         get() = requireNotNull(_binding)
+
+    private val scheduleAdapter = ScheduleAdapter()
+    private var scheduleSystem: ScheduleSystem = ScheduleSystem()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,30 +28,28 @@ class RootFragment: Fragment() {
             false)
 
         binding.bnvNav.setOnItemSelectedListener {
-            item ->
-                when(item.itemId){
-                    R.id.it_today -> {
-                        childFragmentManager
-                            .beginTransaction()
-                            .replace(binding.fram.id, TodayFragment())
-                            .commit()
-                        true
-                    }
-                    R.id.it_week -> {
-                        childFragmentManager
-                            .beginTransaction()
-                            .replace(binding.fram.id, WeekFragment())
-                            .commit()
-                        true
-                    }
-                    else -> false
+                item ->
+            when(item.itemId){
+                R.id.it_today -> {
+                    scheduleAdapter.submitList(scheduleSystem.getDayList())
                 }
+                else -> {
+                    scheduleAdapter.submitList(scheduleSystem.getWeekList())
+                }
+            }
+            true
         }
 
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
+        super.onViewCreated(view, savedInstanceState)
+        with(binding.rvBase){
+            this.layoutManager = LinearLayoutManager(requireContext())
+            this.adapter = scheduleAdapter
+            addItemDecoration(ScheduleItemDecoration(scheduleSystem.getSelectedDay()))
+        }
+        scheduleAdapter.submitList(scheduleSystem.getDayList())
     }
 }

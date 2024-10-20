@@ -9,4 +9,5 @@ data class ScheduleLesson(
 enum class TypeLesson(val ru: String){
     LECTURE("Лекция"),
     PRACTICE("Практика"),
+    NONE(""),
 }

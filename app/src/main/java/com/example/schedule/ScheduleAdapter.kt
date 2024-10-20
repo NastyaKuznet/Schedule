@@ -1,5 +1,8 @@
 package com.example.schedule
 
+import android.annotation.SuppressLint
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +15,7 @@ class ScheduleAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     fun submitList(list: List<ScheduleItem>){
         listItems = list.toMutableList()
+        notifyDataSetChanged()
     }
 
     override fun getItemViewType(position: Int): Int {
@@ -31,7 +35,6 @@ class ScheduleAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
                     inflater,
                     parent,
                     false)
-
             )
             ScheduleViewType.DAY.ordinal -> DayViewHolder(
                 ItemDayBinding.inflate(
@@ -73,7 +76,7 @@ class ScheduleAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         fun bind(day: ScheduleDay){
             with(binding){
                 day.run {
-                    tvDay.text = day.nameDay.ru
+                    tvDay.text = nameDay.ru
                 }
             }
         }

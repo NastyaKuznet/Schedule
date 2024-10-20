@@ -2,7 +2,6 @@ package com.example.schedule
 
 data class ScheduleDay(
     var nameDay: Day,
-    //var listLessons: List<ScheduleLesson>,
 ): ScheduleItem
 
 enum class Day(val ru: String){
@@ -12,4 +11,5 @@ enum class Day(val ru: String){
     THURSDAY("Четверг"),
     FRIDAY("Пятница"),
     SATURDAY("Суббота"),
+    SUNDAY("Воскресенье"),
 }

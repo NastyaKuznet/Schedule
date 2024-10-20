@@ -2,4 +2,11 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="blue_c">#4E8DF4</color>
+    <color name="dart_blue_c">#395FBF</color>
+    <color name="t_c">#84A3F2</color>
+    <color name="t_l">#BBDCE2</color>
+    <color name="day">#55A8F0</color>
+    <color name="selectedDay">#5558F0</color>
+    <color name="lesson">#71A2EF</color>
 </resources>

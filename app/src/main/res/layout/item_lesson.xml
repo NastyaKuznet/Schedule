@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:text="time"
         android:textSize="14sp"
+        android:textColor="@color/t_l"
         app:layout_constraintBottom_toTopOf="@id/tv_name_lesson"
         app:layout_constraintStart_toStartOf="@id/tv_name_lesson"/>
 
@@ -18,7 +19,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="nameLesson"
-        android:textSize="25sp"
+        android:textSize="20sp"
+        android:textColor="@color/t_l"
         android:layout_marginStart="10sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,6 +33,7 @@
         android:text="typeLesson"
         android:textSize="20sp"
         android:layout_marginStart="10sp"
+        android:textColor="@color/t_l"
         app:layout_constraintTop_toTopOf="@id/tv_time"
         app:layout_constraintBottom_toBottomOf="@id/tv_time"
         app:layout_constraintStart_toEndOf="@id/tv_time"/>

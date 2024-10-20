@@ -3,7 +3,8 @@
     <item
         android:id="@+id/it_today"
         android:title="Сегодня"
-        android:icon="@drawable/baseline_today_24"/>
+        android:icon="@drawable/baseline_today_24"
+        />
     <item
         android:id="@+id/it_week"
         android:title="Неделя"
