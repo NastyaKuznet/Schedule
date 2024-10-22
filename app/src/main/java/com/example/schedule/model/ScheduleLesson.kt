@@ -1,4 +1,4 @@
-package com.example.schedule
+package com.example.schedule.model
 
 data class ScheduleLesson(
     var time: String,

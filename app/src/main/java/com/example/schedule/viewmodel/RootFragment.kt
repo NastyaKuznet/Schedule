@@ -1,4 +1,4 @@
-package com.example.schedule
+package com.example.schedule.viewmodel
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.schedule.R
 import com.example.schedule.databinding.FragmentRootBinding
+import com.example.schedule.model.ScheduleSystem
 
 class RootFragment: Fragment() {
 

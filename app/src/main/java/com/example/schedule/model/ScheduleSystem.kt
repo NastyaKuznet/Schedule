@@ -1,4 +1,4 @@
-package com.example.schedule
+package com.example.schedule.model
 
 import java.time.DayOfWeek
 import java.time.LocalDate
@@ -128,7 +128,7 @@ class ScheduleSystem() {
         return weekList
     }
 
-    fun getSelectedDay(): Day{
+    fun getSelectedDay(): Day {
         return selectedDay
     }
 

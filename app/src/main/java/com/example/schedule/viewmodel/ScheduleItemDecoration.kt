@@ -1,13 +1,12 @@
-package com.example.schedule
+package com.example.schedule.viewmodel
 
 import android.graphics.Canvas
-import android.graphics.Color
 import android.graphics.Paint
-import android.graphics.Rect
-import android.view.View
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.schedule.R
+import com.example.schedule.model.Day
 
 class ScheduleItemDecoration(
     private val selectedDay: Day

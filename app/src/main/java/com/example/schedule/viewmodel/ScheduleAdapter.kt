@@ -1,13 +1,14 @@
-package com.example.schedule
+package com.example.schedule.viewmodel
 
-import android.annotation.SuppressLint
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.schedule.databinding.ItemDayBinding
 import com.example.schedule.databinding.ItemLessonBinding
+import com.example.schedule.model.ScheduleDay
+import com.example.schedule.model.ScheduleItem
+import com.example.schedule.model.ScheduleLesson
+import com.example.schedule.model.ScheduleViewType
 
 class ScheduleAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
